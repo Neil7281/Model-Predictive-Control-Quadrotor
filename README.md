@@ -1,59 +1,62 @@
 # Model-Predictive-Control-Quadrotor
-📌 Overview
-This project presents a Proportional-Derivative (PD) control framework optimized for accurate trajectory tracking of a quadrotor, especially under the influence of aerodynamic disturbances. The work involves dynamic modeling, PD controller implementation, and gradient-based optimization of control parameters to enhance tracking accuracy across various trajectories.
+This repository presents a simulation-based control framework for trajectory tracking of a quadrotor under aerodynamic influences. Initially focused on Proportional-Derivative (PD) control, the project implements gradient-based optimization for fine-tuning controller gains and sets the foundation for future research in robust control using Model Predictive Control (MPC).
 
 🎯 Objectives
-Develop a nonlinear dynamic model of a quadrotor based on literature.
+Model the full nonlinear dynamics of a quadrotor.
 
-Implement a PD controller for trajectory tracking.
+Design and implement a PD control strategy for trajectory tracking.
 
-Optimize the control parameters using gradient-based optimization techniques.
+Optimize PD control gains using gradient-based optimization to minimize trajectory tracking error.
 
-Evaluate performance on different reference trajectories: Circular, Helical, and Lissajous.
+Analyze controller performance on multiple reference trajectories: Circular, Helical, and Lissajous.
+
+Lay the groundwork for future implementation of MPC-based control.
 
 ⚙️ Methodology
 1. Dynamic Modeling
-A full nonlinear model of the quadrotor is derived considering its 6-DOF motion and aerodynamic influences.
+A nonlinear 6-DOF model of a quadrotor is developed, incorporating translational and rotational dynamics under external disturbances.
 
-2. PD Control Strategy
-A PD controller is implemented to regulate quadrotor position and attitude using the error between the desired and actual states.
+2. PD Control Architecture
+A traditional PD controller is applied to regulate position and orientation. Controller performance depends on the tuning of Kp and Kd gains.
 
-3. Parameter Optimization
-Control gains are optimized using a gradient-based approach to minimize the integral of squared error (ISE) over each trajectory.
+3. Optimization of Control Gains
+An objective function based on the Integral of Squared Error (ISE) is minimized using gradient-based optimization to identify optimal control parameters for each trajectory.
 
-📈 Results
-Trajectory tracking performance was evaluated for:
+📈 Simulation Results
+Tracking performance was validated on three complex trajectories:
 
-Circular Trajectory: Demonstrated minimal error with optimized gains.
+Circular Trajectory – Demonstrated consistent convergence to reference path.
 
-Helical Trajectory: Controller adapted well to 3D path variations.
+Helical Trajectory – Showed stability and smooth elevation tracking.
 
-Lissajous Trajectory: Showed sensitivity to gain tuning, emphasizing the need for trajectory-specific parameters.
+Lissajous Trajectory – Captured dynamic path changes with reduced overshoot.
 
 ✅ Conclusion
-The optimized PD controller significantly improved trajectory tracking accuracy.
+The optimized PD controller successfully enhanced the quadrotor’s tracking accuracy across diverse trajectory types.
 
-Gain values differ per trajectory, validating the importance of trajectory-specific tuning.
+Gain values significantly varied with the trajectory, highlighting the importance of task-specific tuning.
 
-The study provides a base for adaptive control strategies in future research.
+The current PD-based solution provides a strong baseline for robust trajectory tracking.
 
-🔭 Future Work
-The next step is to design an adaptive controller that dynamically adjusts PD gains in real-time for any given trajectory, ensuring robust performance in dynamic environments. Applications include:
+🔮 Next Steps: Model Predictive Control (MPC)
+To overcome the limitations of fixed-gain PD controllers, future work will implement Model Predictive Control:
 
-Precision agriculture
+MPC can handle multi-variable systems and constraints in real time.
 
-Autonomous surveillance
+It allows predictive optimization over a moving horizon, enabling the system to adapt to changing dynamics and external disturbances.
 
-Aerial delivery systems
+This approach is expected to offer robustness, adaptability, and optimal performance in uncertain and complex environments.
+
 
 📚 References
-Garima Bhandari, et al., 2022. Bond graph modeling and trajectory control of H-drone, 13th Asian Control Conference.
+Bhandari, G. et al., 2022 – Bond graph modeling and trajectory control of H-drone (Asian Control Conference)
 
-T.P. Nascimento & M. Saska, 2019. Position and attitude control of multi-rotor aerial vehicles: A survey, Annual Reviews in Control.
+Nascimento, T.P. & Saska, M., 2019 – Position and attitude control of multi-rotor aerial vehicles: A survey (Annual Reviews in Control)
 
-M.K. Sahoo, J.K. Dutt, S.K. Saha, 2021. Quadcopter control using the viscoelastic control law, ICCAS.
+Sahoo, M.K. et al., 2021 – Quadcopter control using viscoelastic control law (ICCAS)
 
 👤 Author
 Neelkumar Subhashbhai Ahir
-Supervised by Prof. Garima Bhandari
+Supervisor: Prof. Garima Bhandari
+
 
