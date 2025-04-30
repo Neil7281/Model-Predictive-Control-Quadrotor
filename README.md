@@ -1,4 +1,4 @@
-# Model-Predictive-Control-Quadrotor
+# Optimized PD Controller for Quadrotor Trajectory Tracking
 This repository presents a simulation-based control framework for trajectory tracking of a quadrotor under aerodynamic influences. Initially focused on Proportional-Derivative (PD) control, the project implements gradient-based optimization for fine-tuning controller gains and sets the foundation for future research in robust control using Model Predictive Control (MPC).
 
 🎯 Objectives
