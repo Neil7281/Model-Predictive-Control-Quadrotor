@@ -47,14 +47,6 @@ It allows predictive optimization over a moving horizon, enabling the system to 
 
 This approach is expected to offer robustness, adaptability, and optimal performance in uncertain and complex environments.
 
-
-📚 References
-Bhandari, G. et al., 2022 – Bond graph modeling and trajectory control of H-drone (Asian Control Conference)
-
-Nascimento, T.P. & Saska, M., 2019 – Position and attitude control of multi-rotor aerial vehicles: A survey (Annual Reviews in Control)
-
-Sahoo, M.K. et al., 2021 – Quadcopter control using viscoelastic control law (ICCAS)
-
 👤 Author
 Neelkumar Subhashbhai Ahir
 Supervisor: Prof. Garima Bhandari
